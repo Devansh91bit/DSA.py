@@ -37,24 +37,28 @@ class Singly_Linked_List:
         return
 
     def pop(self, index = None):
+        poped_value = None
         if self.length == 0:
             print("Empty Linked List, Nothing to pop !!")
             return
         elif index == None:
             curr = self.head
             if curr.next == None:
+                poped_value = curr.data
                 self.head = None
             else:
                 while curr.next.next != None:
                     curr = curr.next
                 else:
+                    poped_value = curr.next.data
                     curr.next = None
         elif index != None:
             curr = self.head
-            if index >= self.length:
+            if index < 0 or index >= self.length:
                 print(f"Invalid index passed to pop, the current length of the linked list = {self.length}")
                 return
             elif index == 0:
+                poped_value = curr.data
                 self.head = curr.next
             else:
                 i = 1
@@ -62,10 +66,11 @@ class Singly_Linked_List:
                     curr = curr.next
                     i += 1
                 else: 
+                   poped_value = curr.next.data
                    curr.next = curr.next.next
         self.length -= 1    
         print("Element deleted successfully !!")  
-        return
+        return poped_value
 
     def len(self):
         print(f"The length of the linked list = {self.length}")
@@ -76,7 +81,7 @@ class Singly_Linked_List:
             curr = self.head
             new_node.next = curr
             self.head = new_node
-        elif index >= self.length:
+        elif index < 0 or index > self.length:
             print(f"Invalid index passed to insert, the current length of the linked list = {self.length}")
             return
         else:
@@ -115,9 +120,11 @@ while True:
         ch2 = int(input("Enter your choice: "))
         if ch2 == 1:
             x = int(input("Enter the index: "))
-            linked_list.pop(x)
+            y = linked_list.pop(x)
+            print(f"Poped value = {y}")
         elif ch2 == 2:
-            linked_list.pop()
+            y = linked_list.pop()
+            print(f"Poped value = {y}")
         else:
             print("Invalid Input !!")
     elif ch == 4:
