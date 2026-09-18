@@ -92,7 +92,7 @@ class Singly_Linked_List:
         self.length += 1
         return print(f"Element inserted successfully at index = {index}")
 
-#Testing linked list and operations using user - Menu driven implementation  
+#Testing linked list and operations through user - Menu driven implementation  
 linked_list = Singly_Linked_List()
 while True:
     print("\n=======================================================")
