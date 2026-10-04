@@ -26,7 +26,8 @@ for _ in range(D2):
     curr = curr.next
 
 num1, num2 = num1.next, num2.next # Removing the unnecessary default head
-head1, head2 = num1, num2 # The heads provided for the solution so that the actual linked list numbers don't get lost
+head1, head2 = num1, num2  # the passed parameters for the solution
+
 # Actual Implementation: Adding these 2 reversed numbers as linked list (assuming head1, head2 is passed as parameters)
 result = LinkedNode()
 temp = result
