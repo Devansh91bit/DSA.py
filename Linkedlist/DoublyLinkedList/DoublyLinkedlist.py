@@ -1,4 +1,4 @@
-"""Basic Implementation / creation of Singly Linked list (Don't expect exceptional handling....)"""
+"""Basic Implementation / creation of Doubly Linked list (Don't expect exceptional handling....)"""
 #Creating the class for the nodes
 class Node: 
     def __init__(self, data = 0, next = None, prev = None):
