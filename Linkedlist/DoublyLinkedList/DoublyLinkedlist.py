@@ -108,7 +108,7 @@ class DoublyLinkedList:
         else:
             i, curr = 0, self.head
             while i < self.length:
-                print(f"{curr.data}", end = " -> ")
+                print(f"{curr.data}", end = " <--> ")
                 curr = curr.next
                 i += 1
             print(None)
