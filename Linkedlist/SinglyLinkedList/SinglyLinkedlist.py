@@ -1,9 +1,9 @@
 """Basic Implementation / creation of Singly Linked list (Don't expect exceptional handling....)"""
 #Creating the class for the nodes
 class Node:
-    def __init__(self, data):
+    def __init__(self, data = 0, next = None):
         self.data = data
-        self.next = None
+        self.next = next
 
 #Creating the class for the Singly Linked list with operations
 class Singly_Linked_List:
